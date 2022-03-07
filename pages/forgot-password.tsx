@@ -18,7 +18,7 @@ export default function PasswordReset() {
   async function handlePasswordChange(e) {
     try {
       await sendPasswordResetEmail(auth, email, {
-        url: "http://localhost:3000/SignIn",
+        url: "https://firebase-auth-with-nextjs-16rjcqd0e-anemoi4.vercel.app/SignIn",
       });
       setMessage("Password reset has been sent to your email address!");
       setIsSent(true);

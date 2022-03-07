@@ -60,7 +60,7 @@ export default function SignUp() {
       console.log(userCredential);
       console.log("email verification sent!");
       await sendEmailVerification(auth.currentUser, {
-        url: "http://localhost:3000/SignIn",
+        url: "https://firebase-auth-with-nextjs-16rjcqd0e-anemoi4.vercel.app/SignIn",
       });
       setLoading(false);
       router.push("/verify");

@@ -86,7 +86,7 @@ export default function SignIn() {
 
   async function handlePasswordChange(e) {
     await sendPasswordResetEmail(auth, email, {
-      url: "http://localhost:3000/SignIn",
+      url: "https://firebase-auth-with-nextjs-16rjcqd0e-anemoi4.vercel.app/SignIn",
     });
   }
 
