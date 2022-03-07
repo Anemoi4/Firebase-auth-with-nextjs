@@ -57,8 +57,6 @@ export default function SignUp() {
       await updateProfile(auth.currentUser, {
         displayName: username,
       });
-      console.log(userCredential);
-      console.log("email verification sent!");
       await sendEmailVerification(auth.currentUser, {
         url: "https://firebase-auth-with-nextjs-16rjcqd0e-anemoi4.vercel.app/SignIn",
       });
@@ -67,7 +65,6 @@ export default function SignUp() {
     } catch (error) {
       const errors = handleErrors(error.message);
       setErrorMessages(errors);
-      console.log(errors);
     }
   }
   return (

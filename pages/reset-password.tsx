@@ -35,9 +35,7 @@ export default function ResetPassword() {
       });
 
       if (mode === "passwordReset") {
-        console.log("Bing chilling");
       } else if (mode === "verifyEmail") {
-        console.log("Got to verifying email!");
         handleVerifyEmail(auth, oobCode);
       }
     }
@@ -46,7 +44,6 @@ export default function ResetPassword() {
   async function handleVerifyEmail(auth, actionCode) {
     try {
       const res = await applyActionCode(auth, actionCode);
-      console.log("Verifying email", res);
     } catch (error) {
       console.log(error);
     }
@@ -55,7 +52,6 @@ export default function ResetPassword() {
   async function handlePasswordReset(e) {
     try {
       const res = await verifyPasswordResetCode(auth, actionData.oobCode);
-      console.log("Oobcode was valid!");
       const result = validatePassword(newPassword);
       if (result !== "Valid")
         return setErrorMessages({ ...errorMessages, password: result });
@@ -111,11 +107,6 @@ export default function ResetPassword() {
       </div>
     );
   } else {
-    return (
-      <div>
-        moi
-        {console.log("Moi")}
-      </div>
-    );
+    return null;
   }
 }

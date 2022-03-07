@@ -44,8 +44,6 @@ export default function Dashboard() {
     }
   }, [user]);
 
-  console.log("Rendering user in dashboard", user);
-
   if (user) {
     return (
       <div className="dashboard-wrapper">

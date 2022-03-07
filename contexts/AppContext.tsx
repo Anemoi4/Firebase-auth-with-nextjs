@@ -33,9 +33,7 @@ export const AppContextProvider = ({ children }) => {
   useEffect(() => {
     setLoading(true);
     onAuthStateChanged(auth, (user) => {
-      console.log("User state has been changed: ", user);
       if (user) {
-        console.log("changing user state in app context... ");
         // Make sure user has verified their email
         if (user.emailVerified) {
           setUser({
