@@ -58,8 +58,8 @@ export default function SignIn() {
     }
   }
 
-  function googleLoginFailure() {
-    console.log("Google sign in was unsuccessful. Try again later");
+  function googleLoginFailure(res) {
+    console.log("Google sign in was unsuccessful. Try again later", res);
   }
 
   async function handleSubmit(e) {
